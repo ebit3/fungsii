@@ -1,3 +1,12 @@
+<?php
+
+require_once 'fungsi.php';
+
+$data = show_data("SELECT * FROM tb_data");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,15 +24,22 @@
     <br>
     <br>
 
-    <table border="1" cellspacing="0" width="100px">
+    <table border="1" cellspacing="0" width="300px">
         <tr>
             <td>Nama</td>
             <td>no</td>
+            <td>action</td>
         </tr>
-        <tr>
-            <td>ebit</td>
-            <td>11</td>
-        </tr>
+
+        <?php foreach ($data as $row) : ?>
+
+            <tr>
+                <td><?= $row['nama'] ?></td>
+                <td><?= $row['no'] ?></td>
+            </tr>
+
+        <?php endforeach ?>
+
     </table>
 
 </body>

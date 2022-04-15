@@ -7,6 +7,23 @@ function koneksi()
     return mysqli_connect('localhost', 'root', '', 'db_fungsi');
 }
 
+function show_data($sql)
+{
+    # code...
+
+    $koneksi = koneksi();
+
+    $query = mysqli_query($koneksi, $sql);
+
+    $data = [];
+
+    while ($row = mysqli_fetch_assoc($query)) {
+        $data[] = $row;
+    }
+
+    return $data;
+}
+
 
 function add_data($data)
 {
