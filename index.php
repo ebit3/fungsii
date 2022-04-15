@@ -37,7 +37,7 @@ $data = show_data("SELECT * FROM tb_data");
                 <td><?= $row['nama'] ?></td>
                 <td><?= $row['no'] ?></td>
                 <td>
-                    <a href="">Edit</a> |
+                    <a href="edit.php?id=<?= $row['id_data'] ?>">Edit</a> |
                     <a href="">Hapus</a> |
                     <a href="detail.php?id=<?= $row['id_data'] ?>">Detail</a>
                 </td>

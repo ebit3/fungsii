@@ -21,8 +21,8 @@ $row = show_data("SELECT * FROM tb_data WHERE id_data = '" . $id . "' ");
 <body>
 
     <ul>
-        <li>nama</li>
-        <li>nomor </li>
+        <li><?= $row['nama'] ?></li>
+        <li><?= $row['no'] ?></li>
     </ul>
 
     <ol>
