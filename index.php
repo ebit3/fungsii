@@ -24,7 +24,7 @@ $data = show_data("SELECT * FROM tb_data");
     <br>
     <br>
 
-    <table border="1" cellspacing="0" width="300px">
+    <table border="1" cellspacing="0" width="500px">
         <tr>
             <td>Nama</td>
             <td>no</td>
@@ -36,6 +36,11 @@ $data = show_data("SELECT * FROM tb_data");
             <tr>
                 <td><?= $row['nama'] ?></td>
                 <td><?= $row['no'] ?></td>
+                <td>
+                    <a href="">Edit</a> |
+                    <a href="">Hapus</a> |
+                    <a href="detail.php?id=<?= $row['id_data'] ?>">Detail</a>
+                </td>
             </tr>
 
         <?php endforeach ?>
