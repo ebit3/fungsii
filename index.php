@@ -10,7 +10,12 @@
 
 <body>
 
-    <table border="1">
+    <a href="tambah.php">Tambah data</a>
+
+    <br>
+    <br>
+
+    <table border="1" cellspacing="0" width="100px">
         <tr>
             <td>Nama</td>
             <td>no</td>
