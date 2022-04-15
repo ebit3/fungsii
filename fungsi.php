@@ -1,5 +1,6 @@
 <?php
 
+// koneksi
 function koneksi()
 {
     # code...
@@ -7,6 +8,8 @@ function koneksi()
     return mysqli_connect('localhost', 'root', '', 'db_fungsi');
 }
 
+
+// tampil data
 function show_data($sql)
 {
     # code...
@@ -15,16 +18,29 @@ function show_data($sql)
 
     $query = mysqli_query($koneksi, $sql);
 
-    $data = [];
+    // jika tampil satu
 
-    while ($row = mysqli_fetch_assoc($query)) {
-        $data[] = $row;
+    if (mysqli_num_rows($query) === 1) {
+
+        # code...
+        return mysqli_fetch_assoc($query);
+    } else {
+
+        # code...
+
+        $data = [];
+
+        while ($row = mysqli_fetch_assoc($query)) {
+
+            $data[] = $row;
+        }
+
+        return $data;
     }
-
-    return $data;
 }
 
 
+// tambah data
 function add_data($data)
 {
     # code...
