@@ -1,3 +1,20 @@
+<?php
+
+require_once 'fungsi.php';
+
+if (isset($_POST['submit'])) {
+    # code...
+    if (add_data($_POST) > 0) {
+        # code...
+        echo "berhasil";
+    } else {
+        # code...
+        echo "gagal";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +27,7 @@
 
 <body>
 
-    <form action="fungsi.php" method="post">
+    <form action="" method="post">
 
         <label for="">Nama</label>
         <input type="text" name="nama" id="nama">
