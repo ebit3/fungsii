@@ -10,6 +10,17 @@
 
 <body>
 
+    <table border="1">
+        <tr>
+            <td>Nama</td>
+            <td>no</td>
+        </tr>
+        <tr>
+            <td>ebit</td>
+            <td>11</td>
+        </tr>
+    </table>
+
 </body>
 
 </html>
